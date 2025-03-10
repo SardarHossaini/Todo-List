@@ -9,9 +9,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 50px;
 }
 .TodoWrapper {
-  
+  background-color: #08013c;
+  padding: 40px 30px;
+  border-radius: 5px;
+}
+.todo-input {
+  padding: 7px;
+  background-color: transparent;
+  border: 1px solid #8758ffaa;
+  outline: none;
+  color: white;
 }
 .todo-input::placeholder {
   color: #ffffff4d;
