@@ -24,8 +24,14 @@ const TodoWrapper = () => {
     );
   };
   const deleteTodo = (id) => {
-    const newTodo = todos.filter((todo) => todo.id !== id);
-    setTodos(newTodo);
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+  const editTodo = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
+      )
+    );
   };
   return (
     <div className="TodoWrapper">
@@ -37,6 +43,7 @@ const TodoWrapper = () => {
           key={index}
           toggleComplete={toggleComplete}
           deleteTodo={deleteTodo}
+          editTodo={editTodo}
         />
       ))}
     </div>
