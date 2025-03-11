@@ -1,7 +1,12 @@
-const Todo = ({ task }) => {
+const Todo = ({ task, toggleComplete }) => {
   return (
     <div className="Todo">
-      <p>{task.task}</p>
+      <p
+        className={`${task.completed ? "completed" : ""}`}
+        onClick={() => toggleComplete(task.id)}
+      >
+        {task.task}
+      </p>
       <div className="">
         <i className="fa fa-pen"></i>
         <i className="fa fa-trash"></i>
