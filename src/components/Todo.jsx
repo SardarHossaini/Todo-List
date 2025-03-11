@@ -1,7 +1,11 @@
-const Todo = () => {
+const Todo = ({ task }) => {
   return (
-    <div className="todo">
-      <h1>Todo</h1>
+    <div className="Todo">
+      <p>{task.task}</p>
+      <div className="">
+        <i className="fa fa-pen"></i>
+        <i className="fa fa-trash"></i>
+      </div>
     </div>
   );
 };
