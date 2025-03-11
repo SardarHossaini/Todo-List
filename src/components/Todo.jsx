@@ -1,4 +1,4 @@
-const Todo = ({ task, toggleComplete }) => {
+const Todo = ({ task, toggleComplete, deleteTodo }) => {
   return (
     <div className="Todo">
       <p
@@ -9,7 +9,7 @@ const Todo = ({ task, toggleComplete }) => {
       </p>
       <div className="">
         <i className="fa fa-pen"></i>
-        <i className="fa fa-trash"></i>
+        <i className="fa fa-trash" onClick={() => deleteTodo(task.id)}></i>
       </div>
     </div>
   );
